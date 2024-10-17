@@ -1,0 +1,7 @@
+Buildfile: C:\Users\hp\Documents\Mendix\Onboarding App\deployment\build_core.xml
+
+clean-excluded-jars:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+

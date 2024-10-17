@@ -1,0 +1,18 @@
+{
+  "Configuration": {
+    "DatabaseName": "default",
+    "DatabasePassword": "",
+    "DatabaseType": "HSQLDB",
+    "DatabaseHost": "",
+    "DatabaseUserName": "",
+    "DatabaseUseIntegratedSecurity": "False",
+    "ApplicationRootUrl": "http://localhost:8080/",
+    "ScheduledEventExecution": "None"
+  },
+  "Constants": {
+    "Atlas_Web_Content.Atlas_Web_Content_Version": "3.0.6",
+    "NanoflowCommons.Nanoflow_Commons_Version": "2.1.0",
+    "WebActions.WebActions_Version": "2.4.0"
+  },
+  "AdminPassword": null
+}
