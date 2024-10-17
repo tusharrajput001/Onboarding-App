@@ -37,4 +37,10 @@ public class Microflows
 		}
 		return result;
 	}
+	public static void wFS_AssignDesk(IContext context, myfirstmodule.proxies.EmployeeOnboarding _employeeOnboarding)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("EmployeeOnboarding", _employeeOnboarding == null ? null : _employeeOnboarding.getMendixObject());
+		Core.microflowCall("MyFirstModule.WFS_AssignDesk").withParams(params).execute(context);
+	}
 }
