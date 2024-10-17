@@ -1,0 +1,296 @@
+CREATE TABLE "myfirstmodule$employeeonboarding" (
+	"id" BIGINT NOT NULL,
+	"fullname" VARCHAR_IGNORECASE(200) NULL,
+	"wfh" BOOLEAN NULL,
+	"firstday" TIMESTAMP NULL,
+	"phonemodel" VARCHAR_IGNORECASE(8) NULL,
+	"laptopmodel" VARCHAR_IGNORECASE(6) NULL,
+	PRIMARY KEY("id"));
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"remote", 
+"remote_primary_key")
+ VALUES ('ca363240-2dad-431d-9e4d-ea9f7dfab557', 
+'MyFirstModule.EmployeeOnboarding', 
+'myfirstmodule$employeeonboarding', 
+false, 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('c11eac3f-5c93-44e9-a893-f880e20ca924', 
+'ca363240-2dad-431d-9e4d-ea9f7dfab557', 
+'FullName', 
+'fullname', 
+30, 
+200, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('2b9cd11f-891f-46d8-8e0a-c35575dd22ed', 
+'ca363240-2dad-431d-9e4d-ea9f7dfab557', 
+'WFH', 
+'wfh', 
+10, 
+0, 
+'false', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('caad9495-dda1-4285-8c88-91928866828f', 
+'ca363240-2dad-431d-9e4d-ea9f7dfab557', 
+'FirstDay', 
+'firstday', 
+20, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('fc2b07d4-a143-4705-871f-098658e5a7f2', 
+'ca363240-2dad-431d-9e4d-ea9f7dfab557', 
+'PhoneModel', 
+'phonemodel', 
+40, 
+8, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('4ec9cfbf-0fdd-4c41-9519-da1b79dfc55a', 
+'ca363240-2dad-431d-9e4d-ea9f7dfab557', 
+'LaptopModel', 
+'laptopmodel', 
+40, 
+6, 
+'', 
+false);
+CREATE TABLE "workflowcommons$workflowcomment" (
+	"id" BIGINT NOT NULL,
+	"content" VARCHAR_IGNORECASE(2147483647) NULL,
+	"createddate" TIMESTAMP NULL,
+	"changeddate" TIMESTAMP NULL,
+	"system$owner" BIGINT NULL,
+	"system$changedby" BIGINT NULL,
+	PRIMARY KEY("id"));
+CREATE INDEX "idx_workflowcommons$workflowcomment_system$owner" ON "workflowcommons$workflowcomment" ("system$owner" ASC,"id" ASC);
+CREATE INDEX "idx_workflowcommons$workflowcomment_system$changedby" ON "workflowcommons$workflowcomment" ("system$changedby" ASC,"id" ASC);
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"remote", 
+"remote_primary_key")
+ VALUES ('0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'WorkflowCommons.WorkflowComment', 
+'workflowcommons$workflowcomment', 
+false, 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('51c8f778-50d6-4aa0-9a51-fd0b95726eb8', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'Content', 
+'content', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('4113533e-9b6a-3cac-8200-5661fa5d3ade', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'createdDate', 
+'createddate', 
+20, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('81f36687-e5a2-3b7f-8f0a-8e5217441246', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'changedDate', 
+'changeddate', 
+20, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$index" ("id", 
+"table_id", 
+"index_name")
+ VALUES ('afeb1bd8-4bf7-313e-80da-1109ddf13a03', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'idx_workflowcommons$workflowcomment_system$owner');
+INSERT INTO "mendixsystem$index_column" ("index_id", 
+"column_id", 
+"sort_order", 
+"ordinal")
+ VALUES ('afeb1bd8-4bf7-313e-80da-1109ddf13a03', 
+'6a01fcdf-3c58-3d0f-8dff-bdccfc8f769b', 
+false, 
+0);
+INSERT INTO "mendixsystem$index" ("id", 
+"table_id", 
+"index_name")
+ VALUES ('6fc4cdf5-a262-3963-a8e2-094b15466840', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'idx_workflowcommons$workflowcomment_system$changedby');
+INSERT INTO "mendixsystem$index_column" ("index_id", 
+"column_id", 
+"sort_order", 
+"ordinal")
+ VALUES ('6fc4cdf5-a262-3963-a8e2-094b15466840', 
+'bb9b914e-9c66-35bc-8a21-b59eb3241ae5', 
+false, 
+0);
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name")
+ VALUES ('6a01fcdf-3c58-3d0f-8dff-bdccfc8f769b', 
+'System.owner', 
+'system$owner', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'282e2e60-88a5-469d-84a5-ba8d9151644f', 
+'id', 
+'system$owner');
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name")
+ VALUES ('bb9b914e-9c66-35bc-8a21-b59eb3241ae5', 
+'System.changedBy', 
+'system$changedby', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'282e2e60-88a5-469d-84a5-ba8d9151644f', 
+'id', 
+'system$changedby');
+CREATE TABLE "workflowcommons$workflowcomment_workflow" (
+	"workflowcommons$workflowcommentid" BIGINT NOT NULL,
+	"system$workflowid" BIGINT NOT NULL,
+	PRIMARY KEY("workflowcommons$workflowcommentid","system$workflowid"),
+	CONSTRAINT "uniq_workflowcommons$workflowcomment_workflow_workflowcommons$workflowcommentid" UNIQUE ("workflowcommons$workflowcommentid"));
+CREATE INDEX "idx_workflowcommons$workflowcomment_workflow_system$workflow_workflowcommons$workflowcomment" ON "workflowcommons$workflowcomment_workflow" ("system$workflowid" ASC,"workflowcommons$workflowcommentid" ASC);
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name", 
+"index_name")
+ VALUES ('4c271438-2cff-4a01-b748-9758c4e3232a', 
+'WorkflowCommons.WorkflowComment_Workflow', 
+'workflowcommons$workflowcomment_workflow', 
+'0127127c-d83c-427d-a4d5-58f4d045ea7a', 
+'2ae37bf5-ecb8-4c55-b967-d7383925b208', 
+'workflowcommons$workflowcommentid', 
+'system$workflowid', 
+'idx_workflowcommons$workflowcomment_workflow_system$workflow_workflowcommons$workflowcomment');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_workflowcommons$workflowcomment_workflow_workflowcommons$workflowcommentid', 
+'4c271438-2cff-4a01-b748-9758c4e3232a', 
+'d19b6f5a-df69-3c17-8370-793d89aadbda');
+CREATE TABLE "workflowcommons$workflowattachment" (
+	"id" BIGINT NOT NULL,
+	PRIMARY KEY("id"));
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"superentity_id", 
+"remote", 
+"remote_primary_key")
+ VALUES ('762460e0-b9b4-44f9-9219-0236838c1ba9', 
+'WorkflowCommons.WorkflowAttachment', 
+'workflowcommons$workflowattachment', 
+'170ce49d-f29c-4fac-99a6-b55e8a3aeb39', 
+false, 
+false);
+CREATE TABLE "workflowcommons$workflowattachment_workflow" (
+	"workflowcommons$workflowattachmentid" BIGINT NOT NULL,
+	"system$workflowid" BIGINT NOT NULL,
+	PRIMARY KEY("workflowcommons$workflowattachmentid","system$workflowid"),
+	CONSTRAINT "uniq_workflowcommons$workflowattachment_workflow_workflowcommons$workflowattachmentid" UNIQUE ("workflowcommons$workflowattachmentid"));
+CREATE INDEX "idx_workflowcommons$workflowattachment_workflow_system$workflow_workflowcommons$workflowattachment" ON "workflowcommons$workflowattachment_workflow" ("system$workflowid" ASC,"workflowcommons$workflowattachmentid" ASC);
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name", 
+"index_name")
+ VALUES ('73115a5c-8437-4c31-9f41-e0391fa1e75c', 
+'WorkflowCommons.WorkflowAttachment_Workflow', 
+'workflowcommons$workflowattachment_workflow', 
+'762460e0-b9b4-44f9-9219-0236838c1ba9', 
+'2ae37bf5-ecb8-4c55-b967-d7383925b208', 
+'workflowcommons$workflowattachmentid', 
+'system$workflowid', 
+'idx_workflowcommons$workflowattachment_workflow_system$workflow_workflowcommons$workflowattachment');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_workflowcommons$workflowattachment_workflow_workflowcommons$workflowattachmentid', 
+'73115a5c-8437-4c31-9f41-e0391fa1e75c', 
+'3bd4d8d7-574a-3a9d-a682-326c82c666d4');
+UPDATE "mendixsystem$version"
+ SET "versionnumber" = '4.2', 
+"lastsyncdate" = '20241017 14:19:09';

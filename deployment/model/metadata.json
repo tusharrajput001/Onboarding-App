@@ -10,11 +10,27 @@
       "Name": "Administrator",
       "ManageableRoles": [
         "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
-        "53f5d6fa-6da9-4a71-b011-454ec052cce8"
+        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
+        "76a2eed2-5daf-41d5-b8c2-bcf04dd2cc80",
+        "aed6657c-4c19-43bb-9445-67dbb7299b44",
+        "e3025233-dfc1-44b4-8603-2fc3e95f5a98",
+        "db42b304-4b28-4800-b5c5-19a62160675a"
       ]
     },
     "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
       "Name": "User"
+    },
+    "76a2eed2-5daf-41d5-b8c2-bcf04dd2cc80": {
+      "Name": "WorkflowAdministrator"
+    },
+    "aed6657c-4c19-43bb-9445-67dbb7299b44": {
+      "Name": "Facilities"
+    },
+    "e3025233-dfc1-44b4-8603-2fc3e95f5a98": {
+      "Name": "Manager"
+    },
+    "db42b304-4b28-4800-b5c5-19a62160675a": {
+      "Name": "HR"
     }
   },
   "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
@@ -39,6 +55,11 @@
     }
   ],
   "ScheduledEvents": [],
+  "Configuration": {
+    "SourceDatabaseType": "HSQLDB",
+    "SourceDatabaseName": "default",
+    "SourceBuiltInDatabasePath": "model/sampledata/data/database"
+  },
   "DataBrokerConfiguration": {
     "publishedServices": []
   },

@@ -82,6 +82,9 @@ public class FileDocument
 		if (com.mendix.core.Core.isSubClassOf("System.SynchronizationErrorFile", mendixObject.getType()))
 			return system.proxies.SynchronizationErrorFile.initialize(context, mendixObject);
 
+		if (com.mendix.core.Core.isSubClassOf("WorkflowCommons.WorkflowAttachment", mendixObject.getType()))
+			return workflowcommons.proxies.WorkflowAttachment.initialize(context, mendixObject);
+
 		return new system.proxies.FileDocument(context, mendixObject);
 	}
 

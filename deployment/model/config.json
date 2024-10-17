@@ -14,5 +14,5 @@
     "NanoflowCommons.Nanoflow_Commons_Version": "2.1.0",
     "WebActions.WebActions_Version": "2.4.0"
   },
-  "AdminPassword": null
+  "AdminPassword": "1"
 }
