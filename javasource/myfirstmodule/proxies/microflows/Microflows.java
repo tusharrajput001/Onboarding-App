@@ -22,4 +22,19 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("MyFirstModule.DS_WorkflowUserTask_GetEmployee_OnboardingContext").withParams(params).execute(context);
 		return result == null ? null : myfirstmodule.proxies.EmployeeOnboarding.initialize(context, result);
 	}
+	public static java.util.List<system.proxies.User> wFA_SetUser(IContext context, system.proxies.Workflow _workflow, myfirstmodule.proxies.EmployeeOnboarding _employeeOnboarding)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Workflow", _workflow == null ? null : _workflow.getMendixObject());
+		params.put("EmployeeOnboarding", _employeeOnboarding == null ? null : _employeeOnboarding.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("MyFirstModule.WFA_SetUser").withParams(params).execute(context);
+		java.util.List<system.proxies.User> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(system.proxies.User.initialize(context, obj));
+		}
+		return result;
+	}
 }
